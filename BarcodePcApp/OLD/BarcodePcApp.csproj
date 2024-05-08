@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{721399D4-2E0A-420F-8E82-7BF57F10AAC3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BarcodePcApp</RootNamespace>
+    <AssemblyName>BarcodePcApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>tubes.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CAF2D1EE011C60836342FAC95047DF19F90B8581</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Build.Conversion.v4.0" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Neodynamic.WinControls.BarcodeProfessional, Version=10.0.2000.0, Culture=neutral, PublicKeyToken=c6b33c3093a0d4cd, processorArchitecture=MSIL" />
+    <Reference Include="Neodynamic.WinControls.Design.BarcodeProfessional, Version=10.0.2000.0, Culture=neutral, PublicKeyToken=c6b33c3093a0d4cd, processorArchitecture=MSIL" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BarcodeLayout.cs" />
+    <Compile Include="DataGridViewPrinter.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCheckIn.designer.cs">
+      <DependentUpon>FormCheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCheckOut.designer.cs">
+      <DependentUpon>FormCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDiscardCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDiscardCheck.designer.cs">
+      <DependentUpon>FormDiscardCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIniFil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInventory.Designer.cs">
+      <DependentUpon>FormInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInventoryLeftovers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInventoryLeftovers.Designer.cs">
+      <DependentUpon>FormInventoryLeftovers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewArticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewArticle.Designer.cs">
+      <DependentUpon>FormNewArticle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNyVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNyVersion.Designer.cs">
+      <DependentUpon>FormNyVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrder.Designer.cs">
+      <DependentUpon>FormOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOrgtrad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrgtrad.Designer.cs">
+      <DependentUpon>FormOrgtrad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOverview.Designer.cs">
+      <DependentUpon>FormOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopoup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopoup.Designer.cs">
+      <DependentUpon>FormPopoup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrintBarcodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrintBarcodes.Designer.cs">
+      <DependentUpon>FormPrintBarcodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRelease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRelease.Designer.cs">
+      <DependentUpon>FormRelease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettings.Designer.cs">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransferInventoryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransferInventoryDialog.Designer.cs" />
+    <Compile Include="Misc\ArticleKeepDelete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Misc\ArticleKeepDelete.Designer.cs">
+      <DependentUpon>ArticleKeepDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\Cryptography.cs" />
+    <Compile Include="Misc\printBarcodeItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Misc\printBarcodeItem.Designer.cs">
+      <DependentUpon>printBarcodeItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\StringIntObject.cs" />
+    <Compile Include="Misc\TreeNodeWithID.cs" />
+    <Compile Include="Misc\TreeNodeWithIDCollection.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC\UCEtikettArt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCEtikettArt.Designer.cs">
+      <DependentUpon>UCEtikettArt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\barcode\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormCheckIn.resx">
+      <DependentUpon>FormCheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCheckOut.resx">
+      <DependentUpon>FormCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDiscardCheck.resx" />
+    <EmbeddedResource Include="FormIniFil.resx" />
+    <EmbeddedResource Include="FormInventory.resx" />
+    <EmbeddedResource Include="FormInventoryLeftovers.resx" />
+    <EmbeddedResource Include="FormLogin.resx" />
+    <EmbeddedResource Include="FormMain.resx" />
+    <EmbeddedResource Include="FormNewArticle.resx" />
+    <EmbeddedResource Include="FormNyVersion.resx" />
+    <EmbeddedResource Include="FormOrder.resx" />
+    <EmbeddedResource Include="FormOrgtrad.resx" />
+    <EmbeddedResource Include="FormOverview.resx" />
+    <EmbeddedResource Include="FormPopoup.resx" />
+    <EmbeddedResource Include="FormPrintBarcodes.resx" />
+    <EmbeddedResource Include="FormRelease.resx" />
+    <EmbeddedResource Include="FormSettings.resx" />
+    <EmbeddedResource Include="FormTransferInventoryDialog.resx" />
+    <EmbeddedResource Include="Misc\ArticleKeepDelete.resx">
+      <DependentUpon>ArticleKeepDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misc\printBarcodeItem.resx">
+      <DependentUpon>printBarcodeItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UC\UCEtikettArt.resx">
+      <DependentUpon>UCEtikettArt.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\lathund_klara_barcode_v1.24.pdf" />
+    <None Include="Resources\lathund_klara_barcode_v1.24_eng.pdf" />
+    <None Include="Resources\lathund_klara_barcode_v1.25.pdf" />
+    <None Include="Resources\lathund_klara_barcode_v1.25_eng.pdf" />
+    <None Include="Resources\lathund_klara_barcode_v1.26.pdf" />
+    <None Include="Resources\lathund_klara_barcode_v1.26_eng.pdf" />
+    <None Include="Web References\barcode\barcode.wsdl" />
+    <None Include="Web References\barcode\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\AlbumArtSmall.jpg" />
+    <Content Include="Resources\AlbumArt_{5FA05D35-A682-4AF6-96F7-0773E42D4D16}_Large.jpg" />
+    <Content Include="Resources\AlbumArt_{5FA05D35-A682-4AF6-96F7-0773E42D4D16}_Small.jpg" />
+    <Content Include="Resources\arrow.png" />
+    <Content Include="Resources\arrow_green.gif" />
+    <Content Include="Resources\arrow_green.png" />
+    <Content Include="Resources\arrow_green1.gif" />
+    <Content Include="Resources\arrow_green_small.png" />
+    <Content Include="Resources\arrow_grey.gif" />
+    <Content Include="Resources\arrow_grey1.gif" />
+    <Content Include="Resources\arrow_grey1.png" />
+    <Content Include="Resources\bckgrnd2.jpg" />
+    <Content Include="Resources\bgroundg.jpg" />
+    <Content Include="Resources\Bottle.wav" />
+    <Content Include="Resources\checkInBaltazar.png" />
+    <Content Include="Resources\checkOutBaltazar.png" />
+    <Content Include="Resources\checkOutBaltazar1.png" />
+    <Content Include="Resources\ding.wav" />
+    <Content Include="Resources\discard.png" />
+    <Content Include="Resources\dots.vag2.png" />
+    <Content Include="Resources\dots.vag3.png" />
+    <Content Include="Resources\dots.vag4.gif" />
+    <Content Include="Resources\dots.vag5.gif" />
+    <Content Include="Resources\error.wav" />
+    <Content Include="Resources\Folder.jpg" />
+    <Content Include="Resources\instruction.gif" />
+    <Content Include="Resources\instruction1.gif" />
+    <Content Include="Resources\instruction2.gif" />
+    <Content Include="Resources\instruction3.gif" />
+    <Content Include="Resources\Molekyl_col.png" />
+    <Content Include="Resources\prnt.gif" />
+    <Content Include="Resources\straight_arrow.png" />
+    <Content Include="Resources\Windows Hardware Fail.wav" />
+    <Content Include="Resources\WrongLocation.wav" />
+    <Content Include="tubes.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://ny/ws/barcode.cfc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\barcode\</RelPath>
+      <UpdateFromURL>http://ny/ws/barcode.cfc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BarcodePcApp_barcode_BarcodeService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarcodePcApp", "BarcodePcApp.csproj", "{AC4223EE-FED8-4809-AD14-D30C52C961F8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BarcodePcAppSetup", "..\BarcodePcAppSetup\BarcodePcAppSetup.vdproj", "{29FB61EC-07CB-433B-8939-4A9F64362DBB}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.port.se/tfs/np
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BarcodePcApp.csproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = ..\\BarcodePcAppSetup\\BarcodePcAppSetup.vdproj
+		SccProjectName2 = ../BarcodePcAppSetup
+		SccLocalPath2 = ..\\BarcodePcAppSetup
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC4223EE-FED8-4809-AD14-D30C52C961F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC4223EE-FED8-4809-AD14-D30C52C961F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC4223EE-FED8-4809-AD14-D30C52C961F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC4223EE-FED8-4809-AD14-D30C52C961F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29FB61EC-07CB-433B-8939-4A9F64362DBB}.Debug|Any CPU.ActiveCfg = Debug
+		{29FB61EC-07CB-433B-8939-4A9F64362DBB}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
